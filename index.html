@@ -4,11 +4,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Internet in the Middle East and North Africa: Uneven Development, Trust, and Control</title>
+	<title>Data visualization: Motivations and caveats</title>
 	
 	<base target="_blank">
 
-	<meta name="description" content="There is disparity between countries in different parts of MENA in Internet usage and technology uptake. This has as much to do with a lack of infrastructure development in some countries as cultural and institutional barriers to technology adoption in others. I'll talk about how both of these affect what the Internet looks like and how people interact with it in MENA countries. I'll close with a discussion of a some specific examples from my recent research.">
+	<meta name="description" content="Data visualizaton is complex and tricky. It can help you explore complex data and make sense of it in abstraction. It can help you to communicate trends and patterns withing data in straightforward ways. Too little or too much can confuse and confound. This lecutre discusses some of the ways that you might use plot.ly to explore data. We will also consider the aesthetics of data visualization as a core part of the art itself.">
 	<meta name="author" content="John D. Martin III">
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,7 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/black.css" id="theme">
+	<link rel="stylesheet" href="css/theme/serif.css" id="theme">
 
 	<style>
 		html.bottom-left div.slide-background.present {
@@ -50,84 +50,151 @@
 	<div class="reveal">
 
 		<!-- Any section element inside of this container is displayed as a slide -->
-		<div class="slides" data-background="img/mena.png">
-			<section>
-				<h2>Internet in MENA</h2>
-				<img src="img/mena.png" width="40%" style="border:0;background:none;">
-				<h4>Uneven Development, Trust, and Control</h4>
-				<br/><br/>
+		<div class="slides">
+			<section data-background-image="img/sparkline.png" data-background-size="70%">
+				<h2>Visualization for Exploring and Communicating Data</h2><br/><br/><br/><br/>
+				<!--<img src="img/sparkline.png" width="100%" style="border:0;background:none;box-shadow:none;">-->
+				<h4>Motivations and Caveats</h4><br/>
 				<p>
 					<a href="http://johndmart.in">John D. Martin III</a><br/><a href="http://twitter.com/jdmar3">@jdmar3</a>
 				</p>
 				<aside class="notes"></aside>
 			</section>
 
-			<section data-background-image="img/mena.png" data-background-size="contain" >
-			</section>
-			
-			<section data-background-color="gray" data-background-image="img/mena.png" data-background-size="contain" >
-				<h1 style=color:black;vertical-align:middle;>Uneven Development</h1>
+			<section data-background-image="img/sparkline.png" data-background-size="70%">
+				<h1>Why?</h1><br/><br/><br/><br/><br/>
 			</section>
 
 			<section data-background="#fff">
-				<img src="img/mena-internet-pen-pop.jpg" style="border:0;background:none;">
-				<small><small><a href="http://www.slideshare.net/MaisAbuSalah/ipsosarabnetpresentation-beirut2013130325072901phpapp02">Image: Ipsos MENA - http://www.slideshare.net/MaisAbuSalah/ipsosarabnetpresentation-beirut2013130325072901phpapp02</a></small></small>
+				<img src="img/chisqtable.png" width="50%" style="border:0;background:none;box-shadow:none;float:left;vertical-align:middle;">
+				<img src="img/chisqplot.png" width="40%" style="border:0;background:none;box-shadow:none;float:right;vertical-align:middle;">
+			</section>
+			
+			<section data-background="#fff">
+				<img src="img/anscombe.png" width="80%" style="border:0;background:none;box-shadow:none;float:left;vertical-align:middle;">
 			</section>
 
 			<section data-background="#fff">
-				<img src="img/mena-internet-pen-geo.jpg" style="border:0;background:none;">
-				<small><small><a href="http://www.slideshare.net/MaisAbuSalah/ipsosarabnetpresentation-beirut2013130325072901phpapp02">Image: Ipsos MENA - http://www.slideshare.net/MaisAbuSalah/ipsosarabnetpresentation-beirut2013130325072901phpapp02</a></small></small>
+				<img src="img/anscombe2.png" width="80%" style="border:0;background:none;box-shadow:none;"><br/>
+				<small><a href="http://blog.plot.ly/post/68951620673/why-graph-anscombes-quartet">LINK: How to plot Anscombe's quartet in Plot.ly</a></small>
 			</section>
 			
-			<section data-background-color="green" data-background-image="img/mena.png" data-background-size="contain" >
-				<h1 style=color:black;vertical-align:middle;>Trust</h1>
+			<section data-background-image="img/sparkline.png" data-background-size="70%">
+				<h1>What?</h1><br/><br/><br/><br/>
+				<h4>Plotting different data types</h4>
 			</section>
 			
-			<section data-background-image="img/alex.jpg" >
+			<section data-background="#fff" data-transition="slide-in fade-out">
+				<img src="img/bar.png" width="80%" style="border:0;background:none;box-shadow:none;"><br/>
 			</section>
 			
-			<section data-background-color="red" data-background-image="img/mena.png" data-background-size="contain" >
-				<h1 style=color:black;vertical-align:middle;>Control</h1>
+			<section data-background="#fff" data-transition="fade-in slide-out">
+				<img src="img/bar.png" width="80%" style="border:0;background:none;box-shadow:none;"><br/>
+				Categorical<br/>
+				<small><small><a href="http://help.plot.ly/make-a-bar-graph/">LINK: Make a bar graph</a></small></small>
 			</section>
 			
-			<section data-background-color="black" data-background-image="img/mena.png" data-background-size="contain" data-transition="slide-in fade-out">
-				<h1 style=color:black;vertical-align:middle;>#Jan25</h1>
+			<section data-background="#fff" data-transition="slide-in fade-out">
+				<img src="img/anscombe2.png" width="80%" style="border:0;background:none;box-shadow:none;"><br/><br/>
 			</section>
 			
-			<section data-background-color="black" data-background-image="img/egypt.png" data-background-size="contain" data-transition="fade-in slide-out">
-				<h1 style=color:black;vertical-align:middle;>#Jan25</h1>
+			<section data-background="#fff" data-transition="fade-in slide-out">
+				<img src="img/anscombe2.png" width="80%" style="border:0;background:none;box-shadow:none;"><br/>
+				Bivariate continuous
 			</section>
 			
-			<section data-background-image="img/jan25-2.jpg">
+			<section data-background="#fff">
+				<img src="img/rosling.png" width="80%" style="border:0;background:none;box-shadow:none;"><br/>
 			</section>
 			
-			<section data-background-image="img/jan25.jpg">
+			<section data-background="#fff">
+				<img src="img/rosling2.png" width="80%" style="border:0;background:none;box-shadow:none;"><br/>
+				<small><a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fmoderndata.plot.ly%2Fgraph-data-from-mysql-database-in-python%2F&t=YTkwZDdjM2E0MTUxMDdhYjc3ZTg1OWI2MzY4ODQwZTFlYTgzZDU3YSxySzg5TlMzQQ%3D%3D&b=t%3A2Yab-eBiad2xVRrOdQSFzg&m=1">LINK: Making Hans Rosling's Gapminder plots with Python in Plot.ly</a></small>
 			</section>
 			
-			<section data-background-color="black" data-background-image="img/egypt.png" data-background-size="contain" >
+			<section data-background="#fff" data-transition="slide-in fade-out">
+				<img src="img/deaths.png" width="80%" style="border:0;background:none;box-shadow:none;"><br/><br/>
 			</section>
 			
-			<section data-background-color="black" data-background-image="img/mena.png" data-background-size="contain" >
-				<h1 style=color:black;vertical-align:middle;>شكراً</h1>
+			<section data-background="#fff" data-transition="fade-in slide-out">
+				<img src="img/deaths.png" width="80%" style="border:0;background:none;box-shadow:none;"><br/>
+				Time series with categorical
+			</section>
+			
+			<section data-background="#fff" data-transition="slide-in fade-out">
+				<img src="img/wayfair.png" width="80%" style="border:0;background:none;box-shadow:none;"><br/><br/>
+			</section>
+			
+			<section data-background="#fff" data-transition="fade-in slide-out">
+				<img src="img/wayfair.png" width="80%" style="border:0;background:none;box-shadow:none;"><br/>
+				Time series with continuous
+			</section>
+			
+			<section>
+				<p>
+					<a href="http://blog.plot.ly/post/120532468127/how-to-analyze-data-seven-modern-remakes-of-the">How to analyze data: Seven modern remakes of the most famous graphs ever</a>
+				</p>
+			</section>
+			
+			<section data-background-image="img/sparkline.png" data-background-size="70%">
+				<h1>How?</h1><br/><br/><br/><br/>
+				<h4>A little style goes a long way</h4>
+			</section>
+			
+			<section data-background-image="img/tufte.png" data-background-size="cover">
+				<h3 style="text-align:right">
+					Edward Tufte
+				</h3>
+				<p style="text-align:right; color:white">
+					statistician,<br/> information design theorist,<br/> analytical designer
+				</p>
+				<br/><br/><br/><br/>
+			</section>
+			
+			<section data-background-image="img/tvdoqi.jpg" data-background-size="contain">
+			</section>
+			
+			<section>
+				<p>
+					<a href="http://moderndata.plot.ly/tufte-style-visualizations-in-r-using-plotly/">Tufte style visualizations in R using Plot.ly</a>
+				</p>
+			</section>
+			
+			<section>
+				<h3>
+					Other visualization experts and exemplars
+				</h3>
+				<p>
+					<a href="http://flowingdata.com/2016/07/28/what-that-election-probability-means/">Nathan Yau - Flowing Data</a>
+				</p>
+				<p>
+					<a href="http://www.xkcd.com/1040/">Randall Munroe - xkcd</a>
+				</p>
+				<p>
+					<a href="https://flowingdata.com/tag/xkcd/">How to make xkcd plots</a>
+				</p>
+			</section>
+			
+			<section>
+				<h2>Thank you.</h2>
+				<img src="img/sparkline.png" width="100%" style="border:0;background:none;box-shadow:none;">
+				
+				<br/><br/>
+				<p>
+					<a href="http://johndmart.in">John D. Martin III</a><br/><a href="http://twitter.com/jdmar3">@jdmar3</a>
+				</p>
+				<aside class="notes"></aside>
 			</section>
 			
 			<section style="text-align:left;font-size:50%;">
 
 				<h2>Image Credits</h2>
 				<p>
-					<a href="http://image.slidesharecdn.com/ipsosarabnetpresentation-beirut2013-130325072901-phpapp02-130326153929-phpapp02/95/mena-internet-usage-consumption-habits-9-638.jpg?cb=1366797125">MENA Internet Penetration and Population - Mais AbuSalah - Ipsos</a>
-				</p>
-				<p>
-					<a href="http://image.slidesharecdn.com/ipsosarabnetpresentation-beirut2013-130325072901-phpapp02-130326153929-phpapp02/95/mena-internet-usage-consumption-habits-8-638.jpg?cb=1366797125">MENA Internet Penetration geographic overview - Mais AbuSalah - Ipsos</a>
-				</p>
-				<p>
-					<a href="http://egyptianstreets.com/2016/01/24/25-photos-of-egypts-january-25-revolution/">Jan 25 Images - Egyptian Streets</a>
-				</p>
-				<p>
-					<a href="http://egyptianstreets.com/2016/01/13/egyptian-government-prepares-itself-for-the-fifth-anniversary-of-the-jan-25-uprising/">Jan 25 Anniversary - Egyptian Streets</a>
-				</p>
-				<p>
-					<a href="https://www.nrk.no/urix/ungdommer-vokter-egyptisk-bibliotek-1.7488642">Alexandria Library - Urix & SNOARC.NO</a>
+					<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Sparkline_dowjones-2.svg/2000px-Sparkline_dowjones-2.svg.png">Sparkline</a></br>
+					<a href="datatable.png">Data Table</a></br>
+					<a href="http://blog.plot.ly/post/120532468127/how-to-analyze-data-seven-modern-remakes-of-the">Plot.ly graphs</a></br>
+					<a href="https://thatsthespir.it/uploads/greyscale_edward-tufte.png">Edward Tufte</a></br>
+					<a href="https://fallenangelrisingsape.files.wordpress.com/2015/06/tvdoqi.jpg?w=1024">The Visual Display of Quantitative Information</a></br>
 				</p>
 				<h2>License</h2>
 				<p>
